@@ -9,22 +9,22 @@
 import Foundation
 import UIKit
 
-class TDTextSlider: UIView {
+open class TDTextSlider: UIView {
 
-    var currentLabel: UILabel = UILabel()
-    var nextLabel: UILabel = UILabel()
-    var textArray: [String] = [String]()
-    var duration: Double = Double()
-    var delay: Double = Double()
-    var viewBounds: CGRect = CGRect()
-    var direction: String = String()
+    open var currentLabel: UILabel = UILabel()
+    open var nextLabel: UILabel = UILabel()
+    open var textArray: [String] = [String]()
+    open var duration: Double = Double()
+    open var delay: Double = Double()
+    open var viewBounds: CGRect = CGRect()
+    open var direction: String = String()
 
     private var counter = 2
 
-    override init (frame : CGRect) {
+    public override init (frame : CGRect) {
         super.init(frame : frame)
     }
-    func createSlider(textArray: [String] ,duration: Double , delay: Double , direction: String = "ltr") {
+    open func createSlider(textArray: [String] ,duration: Double , delay: Double , direction: String = "ltr") {
         self.viewBounds = bounds
         self.textArray = textArray
         self.duration = duration
@@ -74,7 +74,7 @@ class TDTextSlider: UIView {
         label.adjustsFontSizeToFitWidth = true
         return label
     }
-    func startAnimating() {
+    open func startAnimating() {
         if self.textArray.count > 0 {
             UIView.animate(withDuration: duration, animations: {
                 switch self.direction {
@@ -131,7 +131,7 @@ class TDTextSlider: UIView {
         self.init(frame:CGRect.zero)
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         fatalError("This class does not support NSCoding")
     }
 }
