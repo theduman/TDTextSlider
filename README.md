@@ -10,10 +10,10 @@ pod 'TDTextSlider'
 ### Manually
 Drag TDTextSlider.swift file into your project folder
 ## Usage
-```
+```swift
 import TDTextSlider
 ```
-```
+```swift
 class ViewController: UIViewController {
 
     let ts = TDTextSlider(frame: CGRect(x:0,y:200,width: UIScreen.main.bounds.width,height: 100))
@@ -32,6 +32,6 @@ class ViewController: UIViewController {
     }
 }
 ```
-Additionally you can use `direction` paramater to select the way text slide.Default is "ltr" refers left-to-right.You can set "rtl" -> right-to-left "ttb" -> top-to-bottom and "btt" -> bottom-to-top 
+Additionally you can use `direction` paramater to select the way text slide.Default is `"ltr"` refers left-to-right.You can set `"rtl"` -> right-to-left `"ttb"` -> top-to-bottom and `"btt"` -> bottom-to-top 
 ## Customization
 Library created using subclass of UIView so you can customize using default UIView properties.Make sure you add your own customize code after createSlider function so it overrides default behaviours.
